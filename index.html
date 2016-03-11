@@ -22,18 +22,17 @@
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="xregexp-all.js"></script>
   <script type="text/javascript" src="assets/js/conversor.js"></script>
   <script type="text/javascript" src="assets/js/medida.js"></script>
   <script type="text/javascript" src="assets/js/temperatura.js"></script>
-  <script type="text/javascript" src="assets/js/fahrenheit.js"></script>
-  <script type="text/javascript" src="assets/js/kelvin.js"></script>
-  <script type="text/javascript" src="assets/js/celsius.js"></script>
 
 
 
   <!-- FAVICON
   -------------------------------------------------- -->
   <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
 
 </head>
 <body>
@@ -56,15 +55,10 @@
         <tr>
           <th>Enter  Temperature (examples: 32F, 45C, -2.5f):</th>
             <td>
-          <form onsubmit="convertir();return false;">
-            <input id="convert" autofocus placeholder="32F" size="100"  pattern = "^\s*([-+]?\s*?\d+(?:\.\d*)?\s*(?:[Ee]\s*[+-]?\s*\d+)?)?\s*(([cC]([eE]([lL]([sS]([iI]([uU]([sS])?)?)?)?)?)?)|([fF]([aA]([hH]([rR]([eE]([nN]([hH]([eE]([iI]([tT])?)?)?)?)?)?)?)?)?))\s*$">
-          </form>
+              <input id="convert" class="u-full-width" type="text" autofocus oninput="main();" placeholder="Introduzca un valor">
+              <span id="converted"></span>
+
           </td>
-        </tr>
-        <tr>
-          <th>Converted Temperature:</th>
-          <td><span class="output" id="converted"></span></td>
-        </tr>
       </table>
 
     </div>
