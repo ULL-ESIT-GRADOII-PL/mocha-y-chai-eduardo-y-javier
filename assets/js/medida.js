@@ -1,9 +1,12 @@
+(function(exports) {
+    "use strict";
+
 function Medida(valor,tipo)
 {
   var _valor;
   var _tipo;
   var _measures = {};
-  var valortipo = XRegExp('(?<valor>  [0-9]+ ) -?  # valor  \n' +
+  var valortipo = new XRegExp('(?<valor>  [0-9]+ ) -?  # valor  \n' +
              '(?<tipo> [a-z]+ ) -?  # tipo  ', 'ix');
   if(isNaN(valor)){
   var valmatch = XRegExp.exec(valor, valortipo);
@@ -16,7 +19,7 @@ function Medida(valor,tipo)
   };
 }
 Medida.prototype.match = function(valor){
-  regexp = XRegExp('^(\\s*) \n' +
+  regexp = new XRegExp('^(\\s*) \n' +
                 '(?<valor> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) \n' +
                 '(\\s*)                                             \n' +
                 '(?<tipo> [a-z])                                    \n' +
@@ -48,3 +51,5 @@ Medida.prototype.convertir = function(valor) {
   else
     return "Introduzca una temperatura valida: 330e-1 F to C";
 };
+exports.Medida = Medida;
+})(this);
