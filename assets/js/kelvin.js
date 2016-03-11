@@ -1,4 +1,4 @@
 function Farenheit(valor)
 {
-  Temperatura.call(this, valor, 'F')
+  Temperatura.call(this, valor, 'F');
 }

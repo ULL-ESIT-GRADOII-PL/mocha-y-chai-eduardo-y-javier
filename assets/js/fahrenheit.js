@@ -1,6 +1,6 @@
 function Farenheit(valor)
 {
-  Temperatura.call(this, valor, 'F')
+  Temperatura.call(this, valor, 'F');
 }
 Farenheit.prototype = Object.create(Temperatura.prototype);
 Farenheit.prototype.constructor = Farenheit;

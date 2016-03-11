@@ -1,4 +1,4 @@
 function Celsius(valor)
 {
-  Temperatura.call(this,valor,'C')
+  Temperatura.call(this,valor,'C');
 }

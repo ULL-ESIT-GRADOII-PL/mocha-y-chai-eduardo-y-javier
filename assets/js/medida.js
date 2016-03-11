@@ -26,7 +26,7 @@ Medida.prototype.match = function(valor){
                 '(?<destino> [a-z])                                      \n' +
                 '(\\s*)$','ix');
                 return XRegExp.exec(valor, regexp);
-}
+};
 Medida.prototype.convertir = function(valor) {
   var measures = Medida.measures;
 
