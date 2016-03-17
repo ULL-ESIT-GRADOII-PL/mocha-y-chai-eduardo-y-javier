@@ -25,7 +25,7 @@
         },
 
         toKelvin: function(value) {
-          return this.valor - 273;
+          return this.valor + 273.15;
         }
     };
 
@@ -49,7 +49,7 @@
         },
 
         toKelvin: function(value) {
-          return this.toCelsius(this.valor) - 273;
+          return this.toCelsius(this.valor) + 273.15;
         }
     };
 
@@ -65,11 +65,11 @@
         },
 
         toCelsius: function(value) {    //javascript no sabe sumar ._.
-            return ((this.valor) - -273);
+            return ((this.valor) -273);
         },
 
         toFahrenheit: function(value) {
-            return ((this.toCelsius(this.valor) * 9/5)+32);
+            return (((this.valor) * 9/5)- 459.67);
         }
     };
 
