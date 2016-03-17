@@ -56,7 +56,7 @@
                   return "a";
                   throw "Error de tipos";
                 }
-                return source[target]().toFixed(2) + " "+target; // "0 Celsius"
+                return source[target]().toFixed(2) + " "+target.replace("to",""); // "0 Celsius"
             }
             catch(err) {
                 return 'Desconozco como convertir desde "'+tipo+'" hasta "'+destino+'"';
